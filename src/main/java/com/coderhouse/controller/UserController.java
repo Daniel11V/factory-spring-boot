@@ -28,8 +28,13 @@ public class UserController {
         return service.update(id, user);
     }
 
-    @GetMapping("/user/all")
+    @GetMapping("/user")
     public List<UserResponse> searchUser() {
         return service.searchAll();
+    }
+
+    @GetMapping("/user/{id}")
+    public UserResponse getUserById(@PathVariable String id) {
+        return service.searchById(id);
     }
 }

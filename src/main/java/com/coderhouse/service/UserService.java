@@ -10,4 +10,5 @@ public interface UserService {
     UserResponse create(UserRequest request);
     UserResponse update(String id, UserRequest request);
     List<UserResponse> searchAll();
+    UserResponse searchById(String id);
 }
